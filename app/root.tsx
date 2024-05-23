@@ -45,7 +45,7 @@ export default function App() {
       searchField.value = q || "";
     }
   }, [q]);
-  
+
   return (
     <html lang="en">
       <head>
@@ -92,6 +92,7 @@ export default function App() {
                       className={({ isActive, isPending }) =>
                         isActive ? "active" : isPending ? "pending" : ""
                       }
+                      prefetch="intent"
                       to={`contacts/${contact.id}`}
                     >
                       {contact.first || contact.last ? (
